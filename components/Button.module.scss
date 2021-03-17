@@ -1,0 +1,30 @@
+.button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-family: "ubuntu";
+    font-weight: 700; /**/
+}
+
+.white {
+    background-color: var(--White);
+    color: var(--Lightred);
+    border: 1px solid var(--White);
+    &:hover {
+        color: var(--White);
+        background-color: var(--Verylightred);
+        border: 1px solid var(--Verylightred);
+    }
+}
+
+.red {
+    color: var(--White);
+    background: transparent;
+    border: 1px solid var(--White);
+    &:hover {
+        background-color: var(--White);
+        color: var(--Lightred);
+    }
+}

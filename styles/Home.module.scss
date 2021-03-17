@@ -1,0 +1,438 @@
+.main_wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header_wrap {
+    width: 100%;
+    background: url("../public/images/bg-pattern-intro.svg"),
+        linear-gradient(20deg, var(--Verylightred), var(--Lightred));
+    background-size: 220%;
+    background-position: 30% 48%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 80px; /**/
+    padding-bottom: 100px;
+}
+
+.header {
+    width: 100%;
+    padding: 50px;
+    width: 100%;
+    max-width: 1000px;
+
+    @media screen and(max-width:900px) {
+        padding: 60px 25px;
+    }
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.hamburger_button {
+    display: none;
+    @media screen and (max-width: 900px) {
+        display: initial;
+        border: none;
+        outline: none;
+        background: transparent;
+        cursor: pointer;
+    }
+}
+
+.link_desktop {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: "overpass";
+    font-weight: 600;
+    width: 100%;
+    color: var(--Verydarkblue);
+    font-size: 0.8rem;
+    @media screen and (max-width: 900px) {
+        display: none;
+    }
+}
+.link_mobile {
+    display: none;
+
+    @media screen and (max-width: 900px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        background-color: var(--White);
+        border-radius: 10px;
+        width: 100%;
+        padding: 20px;
+        z-index: 3;
+        font-family: "overpass";
+        font-weight: 600;
+        width: 100%;
+        color: var(--Verydarkblue);
+    }
+}
+
+.link_wrap {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    position: relative; /**/
+
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.horizontal_line {
+    display: none;
+    @media screen and (max-width: 900px) {
+        display: inline-block;
+        border: 1px solid hsl(240, 12%, 93%);
+        width: 100%;
+    }
+}
+
+.interaction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--White);
+    &:hover {
+        cursor: pointer;
+    }
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+        p {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: var(--Verydarkgrayishblue);
+            font-size: 1rem;
+        }
+    }
+}
+.signup_button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-family: "ubuntu";
+    font-weight: 700; /**/
+    margin-left: 20px;
+    background-color: var(--White);
+    color: var(--Lightred);
+    &:hover {
+        background-color: var(--Verylightred);
+
+        color: var(--White);
+    }
+    @media screen and (max-width: 900px) {
+        color: var(--White);
+        background: linear-gradient(
+            to right,
+            var(--Verylightred),
+            var(--Lightred)
+        );
+        margin-left: 0; /**/
+    }
+}
+
+.header_intro {
+    text-align: center;
+    margin-top: 90px; /**/
+}
+
+.button_wrap {
+    margin-top: 35px;
+    max-width: 270px; /**/
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_wrap {
+    width: 100%;
+    text-align: center; /**/
+    margin-top: 80px; /**/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 170px; /**/
+    padding-bottom: 250px; /**/
+    overflow: hidden;
+}
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 75px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (max-width: 900px) {
+        margin-top: 35px;
+        padding: 25px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.box_wrap {
+    @media screen and (max-width: 900px) {
+        order: 2;
+        text-align: center;
+        margin-top: 50px;
+    }
+    @media screen and (min-width: 660px) {
+        margin-bottom: 160px;
+    }
+}
+
+.box {
+    text-align: start;
+    margin-bottom: 60px; /**/
+    @media screen and (max-width: 900px) {
+        text-align: center;
+    }
+}
+.illustration_img {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.illustration_img::after {
+    content: url("../public/images/illustration-editor-desktop.svg");
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: -45%;
+    @media screen and (max-width: 900px) {
+        content: url("../public/images/illustration-editor-mobile.svg");
+        position: relative;
+        top: initial;
+        justify-content: center;
+    }
+}
+
+.infrastructure_wrap {
+    margin-top: 50px; /**/
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../public/images/bg-pattern-circles.svg) -80% 80%,
+        linear-gradient(
+            to right,
+            var(--Verydarkgrayblue),
+            var(--Verydarkdesaturatedblue)
+        );
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 80px; /**/
+    border-top-right-radius: 80px; /**/
+    padding: 25px;
+
+    @media screen and (max-width: 900px) {
+        background-position: 50% 100%;
+    }
+}
+.infrastructure {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    position: relative;
+    @media screen and (max-width: 900px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.phone {
+    position: relative;
+    width: 100%;
+}
+.phone::after {
+    content: url(../public/images/illustration-phones.svg);
+    position: absolute;
+    top: -30%;
+    left: -10%;
+    width: 100%;
+
+    @media screen and (max-width: 900px) {
+        display: none;
+    }
+    @media screen and (min-width: 900px) and (max-width: 1020px) {
+        position: relative;
+        top: 0;
+    }
+}
+
+.phone_mobile {
+    display: none;
+    @media screen and (max-width: 900px) {
+        display: flex;
+        img {
+            width: 100%;
+            position: absolute;
+
+            transform: translateY(-50%);
+            @media screen and (min-width: 600px) and (max-width: 720px) {
+                transform: translateY(-58%);
+            }
+            @media screen and (min-width: 720px) and (max-width: 820px) {
+                transform: translateY(-65%);
+            }
+            @media screen and (min-width: 820px) and (max-width: 900px) {
+                transform: translateY(-75%);
+            }
+        }
+    }
+}
+
+.infrastructure_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    width: 100%;
+    @media screen and (max-width: 900px) {
+        text-align: center;
+        margin-top: 150px;
+    }
+}
+
+.info_wrap {
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+    padding-top: 160px; /**/
+    padding-bottom: 320px; /**/
+    @media screen and (max-width: 900px) {
+        padding-top: 0px;
+        padding-bottom: 20px;
+    }
+}
+
+.info {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media screen and (max-width: 900px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.computer {
+    @media screen and (max-width: 900px) {
+        display: flex;
+        justify-content: center;
+    }
+}
+.computer::after {
+    content: url("../public/images/illustration-laptop-desktop.svg");
+    position: absolute;
+    left: -25%;
+    top: 0;
+    @media screen and (max-width: 900px) {
+        content: url("../public/images/illustration-laptop-mobile.svg");
+        position: relative;
+        left: initial;
+    }
+    @media screen and (min-width: 900px) and (max-width: 1050px) {
+        left: -45%;
+    }
+}
+
+.details {
+    padding: 25px;
+    width: 100%;
+}
+
+.info_box {
+    margin-top: 50px;
+    @media screen and (max-width: 900px) {
+        text-align: center;
+    }
+}
+.footer_wrap {
+    width: 100%;
+    background-color: var(--Verydarkblackblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top-right-radius: 80px; /**/
+    margin-top: 30px;
+}
+.footer {
+    width: 100%;
+    max-width: 1000px;
+    font-family: "ubuntu";
+    font-weight: 400;
+    display: flex;
+    align-items: flex-start;
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+
+        align-items: center;
+    }
+}
+
+.footer_box {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+
+    a {
+        text-decoration: none;
+        color: var(--Verydarkgrayishblue);
+        margin-bottom: 10px;
+        &:hover {
+            text-decoration: underline;
+            color: var(--White);
+        }
+    }
+    @media screen and (max-width: 900px) {
+        margin-left: 0;
+        margin-top: 70px;
+        text-align: center;
+    }
+}
+.footer_heading {
+    font-family: "ubuntu";
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--White);
+    p {
+        &:hover {
+            text-decoration: none;
+            cursor: none;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        margin-bottom: 30px;
+    }
+}
