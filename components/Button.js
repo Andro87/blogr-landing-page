@@ -6,6 +6,7 @@ export default function Button(props) {
         <button
             type="button"
             name="button"
+            title="button"
             className={`${styles.button} ${styles[type]}`}
         >
             {title}

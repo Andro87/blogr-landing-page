@@ -23,6 +23,7 @@ export default function Home() {
                             <button
                                 type="button"
                                 name="button"
+                                title="button"
                                 className={styles.hamburger_button}
                                 onClick={() => setOpen(!open)}
                             >
