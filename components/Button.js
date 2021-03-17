@@ -1,4 +1,4 @@
-import styles from "./BUtton.module.scss";
+import styles from "./Button.module.scss";
 
 export default function Button(props) {
     const { title, type } = props;
